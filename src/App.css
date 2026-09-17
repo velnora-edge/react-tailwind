@@ -3688,12 +3688,12 @@ footer {
    HOW STUDYFLOW WORKS
 ========================= */
 
-.how-section {
+/* .how-section {
   padding: 95px 7%;
   background: #ffffff;
   position: relative;
   overflow: hidden;
-}
+} */
 
 .how-section::before {
   content: "";
@@ -3705,6 +3705,7 @@ footer {
   top: -140px;
   right: -80px;
 }
+/* }
 
 .how-heading {
   position: relative;
@@ -3739,7 +3740,7 @@ footer {
   font-size: 13px;
   line-height: 1.8;
   margin-bottom: 3px;
-}
+} */
 
 /* CARDS */
 
@@ -3930,4 +3931,256 @@ footer {
   border-color:var(--primary);
   background:#F8FAFC;
   transform:translateX(5px);
+}
+
+/* ================================
+   YOUR STUDY JOURNEY
+================================ */
+
+.how-section {
+  padding: 110px 7%;
+  background: #f8fafc;
+}
+
+/* Heading */
+
+.how-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+  margin-bottom: 65px;
+}
+
+.how-heading > div span {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.how-heading h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.how-heading > p {
+  max-width: 430px;
+  margin: 0 0 4px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* Cards */
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.how-card {
+  position: relative;
+  min-height: 330px;
+  padding: 38px;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe4ee;
+  border-radius: 26px;
+
+  box-shadow:
+    0 10px 25px rgba(15, 23, 42, 0.06),
+    0 2px 6px rgba(15, 23, 42, 0.03);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* Remove old featured/dark card */
+
+.how-card.featured {
+  background: #ffffff;
+  color: inherit;
+}
+
+
+/* Number */
+
+.how-number {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+  transition: color 0.35s ease;
+}
+
+
+/* Icon */
+
+.how-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 18px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 28px;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* Card heading */
+
+.how-card h3 {
+  margin: 0 0 14px;
+
+  color: #111827;
+  font-size: 23px;
+  font-weight: 750;
+
+  transition: color 0.35s ease;
+}
+
+
+/* Card paragraph */
+
+.how-card p {
+  margin: 0;
+
+  max-width: 280px;
+
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.75;
+
+  transition: color 0.35s ease;
+}
+
+
+/* Arrow */
+
+.how-arrow {
+  position: absolute;
+  bottom: 32px;
+  right: 35px;
+
+  color: #2563eb;
+  font-size: 24px;
+  font-weight: 500;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+
+/* =================================
+   HOVER
+================================= */
+
+.how-card:hover {
+  transform: translateY(-10px);
+
+  background: #1e293b;
+
+  border-color: #1e293b;
+
+  box-shadow:
+    0 25px 50px rgba(15, 23, 42, 0.20);
+}
+
+.how-card:hover .how-number {
+  color: #93c5fd;
+}
+
+.how-card:hover .how-icon {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.how-card:hover h3 {
+  color: #ffffff;
+}
+
+.how-card:hover p {
+  color: #cbd5e1;
+}
+
+.how-card:hover .how-arrow {
+  color: #ffffff;
+  transform: translateX(6px);
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 950px) {
+
+  .how-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 45px;
+  }
+
+  .how-heading h2 {
+    font-size: 36px;
+  }
+
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .how-card {
+    min-height: 300px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .how-section {
+    padding: 75px 20px;
+  }
+
+  .how-heading h2 {
+    font-size: 30px;
+  }
+
+  .how-card {
+    padding: 30px;
+  }
 }
