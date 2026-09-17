@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -19,51 +19,26 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
-      <div className="app">
+  <div className="app">
 
-        <Navbar />
+    <Navbar />
 
-        <Routes>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/planner" element={<Planner />} />
+      <Route path="/subjects" element={<Subjects />} />
+      <Route path="/notes" element={<Notes />} />
+      <Route path="/progress" element={<Progress />} />
+      <Route path="/profile" element={<Profile />} />
+    </Routes>
 
-          <Route
-            path="/"
-            element={<Home />}
-          />
+    <Footer />
 
-          <Route
-            path="/planner"
-            element={<Planner />}
-          />
+  </div>
 
-          <Route
-            path="/subjects"
-            element={<Subjects />}
-          />
-
-          <Route
-            path="/notes"
-            element={<Notes />}
-          />
-
-          <Route
-            path="/progress"
-            element={<Progress />}
-          />
-
-          <Route
-            path="/profile"
-            element={<Profile />}
-          />
-
-        </Routes>
-
-        <Footer />
-
-      </div>
-
-    </BrowserRouter>
+</HashRouter>
   );
 }
 
